@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Панель адміністратора</title>
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../static/css/action_css.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style22.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" type="text/css"
+
+
+</head>
+<body>
+
+<form method="post">
+    <input type="hidden" name="form_id" value="goback"/>
+    <button class="submit2" formmethod="post"> << Повернутись до панелі адміністратора</button>
+</form>
+
+
+<h1 class="textc"> Управління аккаунтами адміністраторів </h1>
+
+<hr>
+<form class="sds">
+    <div class="container">
+        <h2 class="ht"> Додати аккаунт адміністратора </h2>
+        <br>
+
+        <label for="ip"><b>Введіть логін: </b></label>
+        <input type="text" placeholder="Enter login" name="login" required>
+
+        <label for="dns"><b>Введіть пароль:</b></label>
+        <input type="password" placeholder="Enter password" name="pass" maxlength="64" required>
+        <input type="hidden" name="form_id" value="one"/>
+        <button type="submit" formmethod="post">Cтворити</button>
+    </div>
+</form>
+<hr>
+<form class="sds">
+    <div class="container">
+        <h2 class="ht"> Видалити аккаунт адміністратора </h2>
+        <br>
+
+        <label for="ip"><b>Введіть ID: </b></label>
+        <input type="text" placeholder="Enter login" name="id" required>
+        <input type="hidden" name="form_id" value="two"/>
+        <button type="submit" formmethod="post">Видалити</button>
+    </div>
+</form>
+
+<hr>
+
+
+
+<h2 class="ht"> Cписок наявних адміністаторів </h2>
+
+<!--  <div class="imgcontainer">-->
+<!--    <img src="/static/images/3.jpg" alt="Avatar" class="avatar">-->
+<!--  </div>-->
+
+<br>
+
+
+<table class="table_blur">
+       <tr>
+        <th>ID</th>
+        <th>Login</th>
+    </tr>
+
+    {% for item in items %}
+    <tr>
+        <td>{{item['ID']}}</td>
+        <td>{{item['username']}}</td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+
+
+
+
+</body>
+</html>

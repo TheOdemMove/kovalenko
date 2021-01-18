@@ -1,0 +1,43 @@
+
+
+.textc {
+    font-family: oswald;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.textc_2 {
+    font-family: "Trebuchet MS";
+    text-align: center;
+}
+
+body {
+  /*background: linear-gradient(45deg, #EECFBA, #C5DDE8);*/
+    background: radial-gradient(#EECFBA, #C5DDE8);
+}
+
+
+.one {
+    text-align: center;
+    font-family: "Trebuchet MS";
+    font-size: 12px;
+}
+
+
+.test {
+    text-align: center;
+    font-family: "Trebuchet MS";
+    font-size: 16px;
+}
+
+
+hr {
+border: 0;
+height: 1px;
+background: #000;
+background-image: -webkit-linear-gradient(left, #fff, #000, #fff);
+background-image: -moz-linear-gradient(left, #fff, #000, #fff);
+background-image: -ms-linear-gradient(left, #fff, #000, #fff);
+background-image: -o-linear-gradient(left, #fff, #000, #fff);
+}

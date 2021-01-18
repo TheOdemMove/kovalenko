@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результати обстеження</title>
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../static/css/finish_css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" type="text/css"
+</head>
+<body onload="alert('Для того, щоб зберегти або роздрукувати результати натисніть поєднання клавіш: Сtrl + P')">
+
+<h1 class="textc"> Результати обстеження <br> та формування психологічного портрету </h1>
+
+<p class="one"> Обстеження номер: {{items[0]}}</p>
+<p class="one"> Дата проведення: {{items[1]}}</p>
+<p class="one"> ПІБ: {{items[2]}} {{items[3]}} {{items[4]}}</p>
+<p class="one"> Дата народження: {{items[5]}}</p>
+<h3 class="textc_2"> ТЕСТ АДАПТИВНІСТЬ </h3>
+
+
+<div class="test">
+    <div> Початок тестування: {{items[6]}} &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Кінець тестування: {{items[7]}} </div>
+</div>
+<p class="one"> Достовірність результатів обстеження: {{items[8]}} <br> <b>{{items[9]}}</b> </p>
+<p class="one"> Особистісний адаптаційний потенціал: {{items[10]}} <br> <b>{{items[11]}}</b> </p>
+<p class="one"> Поведінкова регуляція: {{items[12]}} <br> <b>{{items[13]}}</b> </p>
+<p class="one"> Комунікативний потенціал: {{items[14]}} <br> <b>{{items[15]}}</b> </p>
+<p class="one"> Морально-етична нормативність: {{items[16]}} <br> <b>{{items[17]}}</b> </p>
+<p class="one"> Військово-професійна спрямованість: {{items[18]}} <br> <b>{{items[19]}}</b> </p>
+<p class="one"> Схильність до девіантних форм поведінки: {{items[20]}} <br> <b>{{items[21]}}</b> </p>
+<p class="one"> Суїцидальний ризик: {{items[22]}} <br> <b>{{items[23]}}</b> </p>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/static/css/style_bdanswer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<form method="post">
+    <input type="hidden" name="form_id" value="goback"/>
+    <button class="submit2" formmethod="post"> << Повернутись до панелі адміністратора</button>
+</form>
+
+
+<h2 class="ht"> База даних результатів обстеження </h2>
+
+<!--  <div class="imgcontainer">-->
+<!--    <img src="/static/images/3.jpg" alt="Avatar" class="avatar">-->
+<!--  </div>-->
+
+<br>
+
+
+<hr>
+
+<form class="sds">
+    <div class="container">
+        <h3 class="ht"> Уведіть ID обстеження, щоб сформувати психологічний портрет </h3>
+        <br>
+
+        <label for="id"><b>Введіть ID: </b></label>
+        <input type="text" placeholder="Enter id" name="id" required>
+        <input type="hidden" name="form_id" value="goinfo"/>
+        <button type="submit" formmethod="post">Сформувати психологічний портрет</button>
+    </div>
+</form>
+<br>
+<hr>
+
+
+<br><br>
+
+
+<table class="table_blur">
+    <tr>
+        <th>ID</th>
+        <th>Прізвище</th>
+        <th>Ім'я</th>
+        <th>По-батькові</th>
+        <th>Дата народження</th>
+        <th>Додаткова інформація</th>
+        <th>Учасник ООС</th>
+        <th>Початок тестування</th>
+        <th>Кінець тестування</th>
+        <th>Дата тестування</th>
+        <th>Достовірність обстеження</th>
+        <th>Особистий адаптаційний потенціал</th>
+        <th>Поведінкова регуляція</th>
+        <th>Комунікативний потенціал</th>
+        <th>Морально-етична нормативність</th>
+        <th>Військово-професійна спрямованість</th>
+        <th>Схильніть до девіантних форм поведінки</th>
+        <th>Суїцидальний ризик</th>
+
+    </tr>
+
+    {% for item in items %}
+    <tr>
+        <td>{{item['ID']}}</td>
+        <td>{{item['ssurname']}}</td>
+        <td>{{item['sname']}}</a></td>
+        <td>{{item['secname']}}</td>
+        <td>{{item['bdate']}}</td>
+        <td>{{item['descr']}}</td>
+        <td>{{item['ooc']}}</td>
+        <td>{{item['timestart']}}</td>
+        <td>{{item['timefinish']}}</td>
+        <td>{{item['datet']}}</td>
+        <td>{{item['dostovirnist']}}</td>
+        <td>{{item['os_potencial']}}</td>
+        <td>{{item['regul']}}</td>
+        <td>{{item['commun']}}</td>
+        <td>{{item['moral']}}</td>
+        <td>{{item['militar']}}</td>
+        <td>{{item['deviant']}}</td>
+        <td>{{item['suicide']}}</td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+<br>
+<br>
+
+
+</body>
+</html>
