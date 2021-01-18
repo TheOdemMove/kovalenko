@@ -1537,6 +1537,7 @@ def auth():
     return render_template('auth.html')
 
 
+
 @app.route('/action', methods=['GET', 'POST'])
 def action():
     if 'admin' in session:
